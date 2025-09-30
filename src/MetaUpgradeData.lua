@@ -255,6 +255,10 @@ ModUtil.LoadOnce(function ()
         { CardUpgradePoints = 20, PlantChaosThalamus = 6, MetaFabric = 25, MixerIBoss = 5 },
         { CardUpgradePoints = 20, PlantChaosThalamus = 8, MetaFabric = 25, MixerIBoss = 8 },
     }
+
+    for i = 31, 62 do
+        ScreenData.MetaUpgradeCardLayout.BonePositions[i] = ScreenData.MetaUpgradeCardLayout.BonePositions[30]
+    end
 end)
 
 
