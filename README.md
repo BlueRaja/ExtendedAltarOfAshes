@@ -1,3 +1,11 @@
+This is a fix to "Extended Alter of Ashes" by Mehaz, since the existing mod crashes the game and Mehaz has gone AWOL. I also made the code more robust to future game updates.
+
+I'll try to fix major bugs, but I won't be taking feature requests.
+
+The original mod description:
+
+--------------------------------
+
 # Extended Altar of Ashes
 
 ### Features:
