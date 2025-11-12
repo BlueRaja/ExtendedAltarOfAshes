@@ -54,80 +54,80 @@ ModUtil.LoadOnce(function ()
     end
 
 	if config.LiteMode then
-		-- Sorceress, Medea
-	    table.insert(MetaUpgradeCardData.ChanneledCast.UpgradeResourceCost, { CardUpgradePoints = 5, MixerHBoss = 2 }) -- Heroic cost 5 moon dust & 2 tears
+		-- Sorceress, Medea: 3 moon dust/1 tear epic -> 5 moon dust/2 tears heroic
+	    table.insert(MetaUpgradeCardData.ChanneledCast.UpgradeResourceCost, { CardUpgradePoints = 5, MixerHBoss = 2 })
 	
-	    -- Wayward Son, Zagreus
-	    table.insert(MetaUpgradeCardData.HealthRegen.UpgradeResourceCost, { CardUpgradePoints = 5, MixerFBoss = 2 }) -- Heroic cost 5 moon dust & 2 cinder
+	    -- Wayward Son, Zagreus: 3 moon dust/1 cinder epic -> 5 moon dust/2 cinder heroic 
+	    table.insert(MetaUpgradeCardData.HealthRegen.UpgradeResourceCost, { CardUpgradePoints = 5, MixerFBoss = 2 })
 	
-	    -- Huntress, Artemis
-	    table.insert(MetaUpgradeCardData.LowManaDamageBonus.UpgradeResourceCost, { CardUpgradePoints = 5, MixerNBoss = 3 }) -- Heroic cost 5 moon dust & 3 wool
+	    -- Huntress, Artemis: 3 moon dust/2 wool epic -> 5 moon dust/3 wool heroic 
+	    table.insert(MetaUpgradeCardData.LowManaDamageBonus.UpgradeResourceCost, { CardUpgradePoints = 5, MixerNBoss = 3 })
 	
-	    -- Eternity, Chronos
-	    table.insert(MetaUpgradeCardData.CastCount.UpgradeResourceCost, { CardUpgradePoints = 5, MixerHBoss = 3 }) -- Heroic cost 5 moon dust & 3 tears
+	    -- Eternity, Chronos: 3 moon dust/2 tears epic -> 5 moon dust/3 tears heroic 
+	    table.insert(MetaUpgradeCardData.CastCount.UpgradeResourceCost, { CardUpgradePoints = 5, MixerHBoss = 3 })
 	
-	    -- Moon, Selene
-	    table.insert(MetaUpgradeCardData.SorceryRegenUpgrade.UpgradeResourceCost, { CardUpgradePoints = 9, MixerGBoss = 3 }) -- Heroic cost 9 moon dust & 3 pearl
+	    -- Moon, Selene: 6 moon dust/2 pearl epic -> 9 moon dust/3 pearl heroic 
+	    table.insert(MetaUpgradeCardData.SorceryRegenUpgrade.UpgradeResourceCost, { CardUpgradePoints = 9, MixerGBoss = 3 })
 	
-	    -- Furies, Megaera, Alecto, & Tisiphone
-	    table.insert(MetaUpgradeCardData.CastBuff.UpgradeResourceCost, { CardUpgradePoints = 5, MixerFBoss = 2 }) -- Heroic cost 5 moon dust & 2 cinder
+	    -- Furies, Megaera, Alecto, & Tisiphone: 3 moon dust/1 cinder epic -> 5 moon dust/2 cinder heroic 
+	    table.insert(MetaUpgradeCardData.CastBuff.UpgradeResourceCost, { CardUpgradePoints = 5, MixerFBoss = 2 })
 	
-	    -- Persistence, Prometheus
-	    table.insert(MetaUpgradeCardData.BonusHealth.UpgradeResourceCost, { CardUpgradePoints = 6, MixerPBoss = 2 }) -- Heroic cost 6 moon dust & 2 feather
+	    -- Persistence, Prometheus: 4 moon dust/1 feather epic -> 6 moon dust/2 feather heroic 
+	    table.insert(MetaUpgradeCardData.BonusHealth.UpgradeResourceCost, { CardUpgradePoints = 6, MixerPBoss = 2 })
 	
-	    -- Messenger, Hermes
-	    table.insert(MetaUpgradeCardData.BonusDodge.UpgradeResourceCost, { CardUpgradePoints = 5, MixerPBoss = 2 }) -- Heroic cost 5 moon dust & 2 feather
+	    -- Messenger, Hermes: 3 moon dust/1 feather epic -> 5 moon dust/2 feather heroic 
+	    table.insert(MetaUpgradeCardData.BonusDodge.UpgradeResourceCost, { CardUpgradePoints = 5, MixerPBoss = 2 })
 	
-	    -- Unseen, Hecate
-	    table.insert(MetaUpgradeCardData.ManaOverTime.UpgradeResourceCost, { CardUpgradePoints = 15, MixerHBoss = 3 }) -- Heroic cost 15 moon dust & 3 tears
+	    -- Unseen, Hecate: 10 moon dust/2 tears epic -> 15 moon dust/3 tears heroic 
+	    table.insert(MetaUpgradeCardData.ManaOverTime.UpgradeResourceCost, { CardUpgradePoints = 15, MixerHBoss = 3 })
 		
-	    -- Night, Nyx
-	    table.insert(MetaUpgradeCardData.MagicCrit.UpgradeResourceCost, { CardUpgradePoints = 6, Mixer6Common = 2 }) -- Heroic cost 6 moon dust & 2 darkness
+	    -- Night, Nyx: 4 moon dust/1 darkness epic -> 6 moon dust/2 darkness heroic 
+	    table.insert(MetaUpgradeCardData.MagicCrit.UpgradeResourceCost, { CardUpgradePoints = 6, Mixer6Common = 2 })
 	
-	    -- Swift Runner, Achilles
-	    table.insert(MetaUpgradeCardData.SprintShield.UpgradeResourceCost, { CardUpgradePoints = 5, MixerFBoss = 2 }) -- Heroic cost 5 moon dust & 2 cinder
+	    -- Swift Runner, Achilles: 3 moon dust/1 cinder epic -> 5 moon dust/2 cinder heroic 
+	    table.insert(MetaUpgradeCardData.SprintShield.UpgradeResourceCost, { CardUpgradePoints = 5, MixerFBoss = 2 })
 	    
-		-- Death, Thanatos
-	    table.insert(MetaUpgradeCardData.LastStand.UpgradeResourceCost, { CardUpgradePoints = 18, Mixer5Common = 2 }) -- Heroic cost 18 moon dust & 2 star dust
+		-- Death, Thanatos: 12 moon dust/1 star dust epic -> 18 moon dust/2 star dust heroic
+	    table.insert(MetaUpgradeCardData.LastStand.UpgradeResourceCost, { CardUpgradePoints = 18, Mixer5Common = 2 })
 	  
-	    -- Centaur, Chiron
-	    table.insert(MetaUpgradeCardData.MaxHealthPerRoom.UpgradeResourceCost, { CardUpgradePoints = 9, MixerOBoss = 2 }) -- Heroic cost 9 moon dust & 2 golden apple
+	    -- Centaur, Chiron: 6 moon dust/1 g.apple epic -> 9 moon dust/2 g.apple heroic
+	    table.insert(MetaUpgradeCardData.MaxHealthPerRoom.UpgradeResourceCost, { CardUpgradePoints = 9, MixerOBoss = 2 })
 	
-	    -- Origination, Chaos
-	    table.insert(MetaUpgradeCardData.StatusVulnerability.UpgradeResourceCost, { CardUpgradePoints = 15, MixerShadow = 2 }) -- Heroic cost 15 moon dust & 2 shadow
+	    -- Origination, Chaos: 10 moon dust/1 shadow epic -> 15 moon dust/2 shadow heroic 
+	    table.insert(MetaUpgradeCardData.StatusVulnerability.UpgradeResourceCost, { CardUpgradePoints = 15, MixerShadow = 2 })
 	
-	    -- Lovers, Orpheus & Eurydice
-	    table.insert(MetaUpgradeCardData.ChanneledBlock.UpgradeResourceCost, { CardUpgradePoints = 8, MixerHBoss = 3 }) -- Heroic cost 8 moon dust & 3 tears
+	    -- Lovers, Orpheus & Eurydice: 5 moon dust/2 tears epic -> 8 moon dust/3 tears heroic
+	    table.insert(MetaUpgradeCardData.ChanneledBlock.UpgradeResourceCost, { CardUpgradePoints = 8, MixerHBoss = 3 })
 	   
-	    -- The Enchantress, Circe
-	    table.insert(MetaUpgradeCardData.DoorReroll.UpgradeResourceCost, { CardUpgradePoints = 8, MixerGBoss = 3 }) -- Heroic cost 8 moon dust & 3 pearl
+	    -- The Enchantress, Circe: 5 moon dust/2 pearl epic -> 8 moon dust/3 pearl heroic 
+	    table.insert(MetaUpgradeCardData.DoorReroll.UpgradeResourceCost, { CardUpgradePoints = 8, MixerGBoss = 3 })
 	   
-	    -- Boatman, Charon
-	    table.insert(MetaUpgradeCardData.StartingGold.UpgradeResourceCost, { CardUpgradePoints = 18, CharonPoints = 5 }) -- Heroic cost 18 moon dust & 5 obol points
+	    -- Boatman, Charon: 12 moon dust/unsure epic -> 18 moon dust/5 obol points heroic 
+	    table.insert(MetaUpgradeCardData.StartingGold.UpgradeResourceCost, { CardUpgradePoints = 18, CharonPoints = 5 })
 	
-	    -- Artificer, Daedalus
-	    table.insert(MetaUpgradeCardData.MetaToRunUpgrade.UpgradeResourceCost, { CardUpgradePoints = 8, MixerNBoss = 3 }) -- Heroic cost 8 moon dust & 3 wool
+	    -- Artificer, Daedalus: 5 moon dust/2 wool epic -> 8 moon dust/3 wool heroic 
+	    table.insert(MetaUpgradeCardData.MetaToRunUpgrade.UpgradeResourceCost, { CardUpgradePoints = 8, MixerNBoss = 3 })
 	    
-		-- Excellence, Patroclus
-	    table.insert(MetaUpgradeCardData.RarityBoost.UpgradeResourceCost, { CardUpgradePoints = 9, MixerNBoss = 3 }) -- Heroic cost 9 moon dust & 3 wool
+		-- Excellence, Patroclus: 6 moon dust/2 wool epic -> 9 moon dust/3 wool heroic
+	    table.insert(MetaUpgradeCardData.RarityBoost.UpgradeResourceCost, { CardUpgradePoints = 9, MixerNBoss = 3 })
 	    
-		-- Queen, Persephone
-	    table.insert(MetaUpgradeCardData.BonusRarity.UpgradeResourceCost, { CardUpgradePoints = 6, MixerGBoss = 3 }) -- Heroic cost 6 moon dust & 3 pearl
+		-- Queen, Persephone: 4 moon dust/2 pearl epic -> 6 moon dust/3 pearl heroic
+	    table.insert(MetaUpgradeCardData.BonusRarity.UpgradeResourceCost, { CardUpgradePoints = 6, MixerGBoss = 3 })
 	    
-		-- The Fates, Three Fates
-	    table.insert(MetaUpgradeCardData.TradeOff.UpgradeResourceCost, { CardUpgradePoints = 9, MixerNBoss = 3 }) -- Heroic cost 9 moon dust & 3 wool
+		-- The Fates, Three Fates: 6 moon dust/2 wool epic -> 9 moon dust/3 wool heroic
+	    table.insert(MetaUpgradeCardData.TradeOff.UpgradeResourceCost, { CardUpgradePoints = 9, MixerNBoss = 3 })
 	    
-		-- Champions, Theseus & Asterius
-	    table.insert(MetaUpgradeCardData.ScreenReroll.UpgradeResourceCost, { CardUpgradePoints = 15, MixerOBoss = 3 }) -- Heroic cost 15 moon dust & 3 golden apple
+		-- Champions, Theseus & Asterius: 10 moon dust/2 g.apple epic -> 15 moon dust/3 g.apple heroic 
+	    table.insert(MetaUpgradeCardData.ScreenReroll.UpgradeResourceCost, { CardUpgradePoints = 15, MixerOBoss = 3 })
 	    
-		-- Strength, Heracles
-	    table.insert(MetaUpgradeCardData.LowHealthBonus.UpgradeResourceCost, { CardUpgradePoints = 18, MixerPBoss = 3 }) -- Heroic cost 18 moon dust & 3 feather
+		-- Strength, Heracles: 12 moon dust/2 feather epic -> 18 moon dust/3 feather heroic 
+	    table.insert(MetaUpgradeCardData.LowHealthBonus.UpgradeResourceCost, { CardUpgradePoints = 18, MixerPBoss = 3 })
 	    
-		-- Divinity, Zeus & Hera
-	    table.insert(MetaUpgradeCardData.EpicRarityBoost.UpgradeResourceCost, { CardUpgradePoints = 15, MixerPBoss = 3 }) -- Heroic cost 15 moon dust & 3 feather
+		-- Divinity, Zeus & Hera: 10 moon dust/2 feather epic -> 15 moon dust/3 feather heroic 
+	    table.insert(MetaUpgradeCardData.EpicRarityBoost.UpgradeResourceCost, { CardUpgradePoints = 15, MixerPBoss = 3 })
 	    
-		-- Judgment, Hades
-	    table.insert(MetaUpgradeCardData.CardDraw.UpgradeResourceCost, { CardUpgradePoints = 30, MetaFabric = 30 }) -- Heroic cost 30 moon dust & 30 fate fabric
+		-- Judgment, Hades: 20 moon dust/20 f.fabric epic -> 30 moon dust/30 f.fabric heroic 
+	    table.insert(MetaUpgradeCardData.CardDraw.UpgradeResourceCost, { CardUpgradePoints = 30, MetaFabric = 30 })
 	else
 		-- Sorceress, Medea
 	    table.insert(MetaUpgradeCardData.ChanneledCast.UpgradeResourceCost, { CardUpgradePoints = 5, PlantFMoly = 10, MixerIBoss = 2 })
@@ -229,7 +229,4 @@ ModUtil.LoadOnce(function ()
 	    table.insert(MetaUpgradeCardData.CardDraw.UpgradeResourceCost, { CardUpgradePoints = 20, PlantChaosThalamus = 6, MetaFabric = 25, MixerIBoss = 5 })
 	    table.insert(MetaUpgradeCardData.CardDraw.UpgradeResourceCost, { CardUpgradePoints = 20, PlantChaosThalamus = 8, MetaFabric = 25, MixerIBoss = 8 })	
 	end
-
 end)
-
-
