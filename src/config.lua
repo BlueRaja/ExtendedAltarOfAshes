@@ -4,5 +4,5 @@ local config = {
 ExtendedAltarOfAshes.Config = config
 return {
     config,
-    LiteMode = true
+    LiteMode = false
 }
