@@ -2,4 +2,7 @@ local config = {
     Enabled = true
 }
 ExtendedAltarOfAshes.Config = config
-return config
+return {
+    config,
+    LiteMode = true
+}
