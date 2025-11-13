@@ -3,16 +3,16 @@ if not ExtendedAltarOfAshes.Config.Enabled then return end
 ModUtil.LoadOnce(function ()
     if config.LiteMode then 
 		local newMetaUpgradeLevelDatas = {
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 550, Mixer6Common = 1, MixerShadow = 1 }}, -- 31 (550 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 600, Mixer6Common = 1, MixerShadow = 1 }}, -- 32 (600 grasp, 1 darkness, 1 shadow) 
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 650, Mixer6Common = 1, MixerShadow = 1 }}, -- 33 (650 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 700, Mixer6Common = 1, MixerShadow = 1 }}, -- 34 (700 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 750, Mixer6Common = 1, MixerShadow = 1 }}, -- 35 (750 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 800, Mixer6Common = 1, MixerShadow = 1 }}, -- 36 (800 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 850, Mixer6Common = 1, MixerShadow = 1 }}, -- 37 (850 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 900, Mixer6Common = 1, MixerShadow = 1 }}, -- 38 (900 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 950, Mixer6Common = 1, MixerShadow = 1 }}, -- 39 (950 grasp, 1 darkness, 1 shadow)
-			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 1000, Mixer6Common = 3, MixerShadow = 3 }}, -- 40 (cap) (1000 grasp, 3 darkness, 3 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 550, Mixer5Common = 1, MixerShadow = 1 }}, -- 31 (550 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 600, Mixer5Common = 1, MixerShadow = 1 }}, -- 32 (600 grasp, 1 star dust, 1 shadow) 
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 650, Mixer5Common = 1, MixerShadow = 1 }}, -- 33 (650 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 700, Mixer5Common = 1, MixerShadow = 1 }}, -- 34 (700 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 750, Mixer5Common = 1, MixerShadow = 1 }}, -- 35 (750 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 800, Mixer5Common = 1, MixerShadow = 1 }}, -- 36 (800 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 850, Mixer5Common = 1, MixerShadow = 1 }}, -- 37 (850 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 900, Mixer5Common = 1, MixerShadow = 1 }}, -- 38 (900 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 950, Mixer5Common = 1, MixerShadow = 1 }}, -- 39 (950 grasp, 1 star dust, 1 shadow)
+			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 1000, Mixer5Common = 1, Mixer6Common = 1 }}, -- 40 (cap) (1000 grasp, 1 star dust, 1 darkness)
 		}
 	else
 		local newMetaUpgradeLevelDatas = {
