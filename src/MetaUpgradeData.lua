@@ -1,7 +1,7 @@
 if not ExtendedAltarOfAshes.Config.Enabled then return end
 
 ModUtil.LoadOnce(function ()
-    if config.LiteMode then 
+    if config.LiteMode.Enabled then 
 		local newMetaUpgradeLevelDatas = {
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 550, Mixer5Common = 1, MixerShadow = 1 }}, -- 31 (550 grasp, 1 star dust, 1 shadow)
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 600, Mixer5Common = 1, MixerShadow = 1 }}, -- 32 (600 grasp, 1 star dust, 1 shadow) 
@@ -53,7 +53,7 @@ ModUtil.LoadOnce(function ()
         table.insert(ScreenData.MetaUpgradeCardLayout.BonePositions, ScreenData.MetaUpgradeCardLayout.BonePositions[defaultNumUpgades]) -- Fix crash due to missing "bone position" data
     end
 
-	if config.LiteMode then
+	if config.LiteMode.Enabled then
 		-- Sorceress, Medea: 3 moon dust/1 tear epic -> 5 moon dust/2 tears heroic
 	    table.insert(MetaUpgradeCardData.ChanneledCast.UpgradeResourceCost, { CardUpgradePoints = 5, MixerHBoss = 2 })
 	
