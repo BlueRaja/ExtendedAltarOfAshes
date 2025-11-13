@@ -1,4 +1,4 @@
-if not ExtendedAltarOfAshes.Config.Enabled then return end
+if not config.Enabled then return end
 
 ModUtil.Path.Context.Wrap("UpgradeMetaUpgradeCardAction", function()
     ModUtil.Path.Wrap("ScreenCantAffordPresentation",
