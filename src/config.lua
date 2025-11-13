@@ -10,4 +10,4 @@ local description = {
     },
 }
 -- ExtendedAltarOfAshes.Config = config (not needed anymore?)
-return config
+return config, description
