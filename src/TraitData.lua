@@ -1,4 +1,4 @@
-if not ExtendedAltarOfAshes.Config.Enabled then return end
+if not config.Enabled then return end
 if config.LiteMode.Enabled then return end
 
 ModUtil.LoadOnce(function ()
