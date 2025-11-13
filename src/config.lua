@@ -1,5 +1,5 @@
 local config = {
-    Enabled = true,
+    enabled = true,
     LiteMode = {
         Enabled = false
     },
