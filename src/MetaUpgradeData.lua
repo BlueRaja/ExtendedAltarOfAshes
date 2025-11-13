@@ -1,4 +1,4 @@
-if config.enabled == false then return end
+if not ExtendedAltarOfAshes.Config.Enabled then return end
 
 ModUtil.LoadOnce(function ()
     local newMetaUpgradeLevelDatas = {}
