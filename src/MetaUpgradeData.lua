@@ -1,4 +1,4 @@
-if not config.Enabled then return end
+if config.enabled == false then return end
 
 ModUtil.LoadOnce(function ()
     if config.LiteMode.Enabled then 
