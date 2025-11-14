@@ -1,5 +1,5 @@
 if not ExtendedAltarOfAshes.Config.Enabled then return end
-if config.LiteMode.Enabled then return end
+if ExtendedAltarOfAshes.Config.LiteMode.Enabled then return end
 
 ModUtil.LoadOnce(function ()
     for _, metaUpgradeName in ipairs(GameData.AllMetaUpgradeTraits) do
