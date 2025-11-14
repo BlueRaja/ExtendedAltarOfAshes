@@ -1,14 +1,12 @@
 local config = {
     Enabled = true,
-    LiteMode = {
-        Enabled = false
-    },
+    AddLegendaryArcana = true,
+    MaxGrasp = 56,
 }
 local description = {
-    enabled = "Enable to activate the mod. Set to false to deactivate the mod. NOTE Lite Mode requires both the main mod and LiteMode toggles to be enabled.",
-    LiteMode = {
-        Enabled = "Enable to activate Lite Mode: 40 max grasp, maximum heroic arcana (not legendary), and better mod compatibility"
-    },
+    Enabled = "Enable to activate the mod. Set to false to deactivate the mod.",
+    AddLegendaryArcana = "If true, both heroic and legendary upgrades will be added to arcana. If false, only heroic upgrades will be added.",
+    MaxGrasp = "The maximum number of grasp points that can be unlocked. The default is 56, which is enough to unlock all arcana.",
 }
 ExtendedAltarOfAshes.Config = config 
 return config, description

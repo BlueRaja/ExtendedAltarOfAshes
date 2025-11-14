@@ -1,6 +1,8 @@
 if not ExtendedAltarOfAshes.Config.Enabled then return end
-if ExtendedAltarOfAshes.Config.LiteMode.Enabled then return end
 
 ModUtil.LoadOnce(function ()
-    TraitRarityData.RarityUpgradeOrder = { "Common", "Rare", "Epic", "Heroic", "Legendary", }
+    -- Only add legendary if other mods have not already altered this table
+    if #TraitRarityData.RarityUpgradeOrder == 4 and ExtendedAltarOfAshes.Config.AddLegendaryArcana then
+        TraitRarityData.RarityUpgradeOrder = { "Common", "Rare", "Epic", "Heroic", "Legendary", }
+    end
 end)
