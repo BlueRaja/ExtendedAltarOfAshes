@@ -3,7 +3,7 @@ if not ExtendedAltarOfAshes.Config.Enabled then return end
 ModUtil.LoadOnce(function ()
     local newMetaUpgradeLevelDatas = {}
 	if config.LiteMode.Enabled then 
-		local newMetaUpgrade = {
+		newMetaUpgradeLevelDatas = {
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 550, Mixer5Common = 1, MixerShadow = 1 }}, -- 31 (550 grasp, 1 star dust, 1 shadow)
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 600, Mixer5Common = 1, MixerShadow = 1 }}, -- 32 (600 grasp, 1 star dust, 1 shadow) 
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 650, Mixer5Common = 1, MixerShadow = 1 }}, -- 33 (650 grasp, 1 star dust, 1 shadow)
@@ -15,11 +15,8 @@ ModUtil.LoadOnce(function ()
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 950, Mixer5Common = 1, MixerShadow = 1 }}, -- 39 (950 grasp, 1 star dust, 1 shadow)
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 1000, Mixer5Common = 1, Mixer6Common = 1 }}, -- 40 (cap) (1000 grasp, 1 star dust, 1 darkness)
 		}
-		for k, v in ipairs(newMetaUpgrade) do
-            table.insert(newMetaUpgradeLevelDatas, v)
-        end
 	else
-		local newMetaUpgrade = {
+		newMetaUpgradeLevelDatas = {
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 420, Mixer6Common = 1, MixerShadow = 1 }}, -- 31
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 460, Mixer6Common = 1, MixerShadow = 1 }},
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 500, Mixer6Common = 1, MixerShadow = 1 }},
@@ -49,9 +46,6 @@ ModUtil.LoadOnce(function ()
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 1000, MixerHBoss = 10, Mixer6Common = 5, MixerShadow = 5 }},
 			{ CostIncrease = 1, ResourceCost = { MemPointsCommon = 1000, MixerHBoss = 10, Mixer6Common = 6, MixerShadow = 6 }}, -- 56, max to equip all 25 cards
 		}
-		for k, v in ipairs(newMetaUpgrade) do
-            table.insert(newMetaUpgradeLevelDatas, v)
-        end	
 	end
 		
     local defaultNumUpgades = #MetaUpgradeCostData.MetaUpgradeLevelData
