@@ -1,5 +1,14 @@
 local config = {
-    Enabled = true
+    Enabled = true,
+    LiteMode = {
+        Enabled = false
+    },
 }
-ExtendedAltarOfAshes.Config = config
-return config
+local description = {
+    enabled = "Enable to activate the mod. Set to false to deactivate the mod. NOTE Lite Mode requires both the main mod and LiteMode toggles to be enabled.",
+    LiteMode = {
+        Enabled = "Enable to activate Lite Mode: 40 max grasp, maximum heroic arcana (not legendary), and better mod compatibility"
+    },
+}
+ExtendedAltarOfAshes.Config = config 
+return config, description
