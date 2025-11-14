@@ -1,8 +1,11 @@
 This is a fix to "Extended Alter of Ashes" by Mehaz, since the existing mod crashes the game and Mehaz has gone AWOL. I also made the code more robust to future game updates.
 
 There is now a **Lite Mode** option in the config files for a lightweight (and less powerful) version of the mod. For comparison:
+
 **Vanilla** -- maximum 30 grasp and epic rarity arcana
+
 **Default Extended Altar** -- maximum 56 grasp and legendary rarity arcana; high arcana upgrade costs; not compatible with mods that add new rarity (eg Perfectoinist)
+
 **Lite Mode** -- maximum 40 grasp and heroic rarity arcana; heroic arcana upgrade costs set to ~150% of vanilla epic upgrade cost; compatible with most other mods
 
 I'll try to fix major bugs, but I won't be taking feature requests.
