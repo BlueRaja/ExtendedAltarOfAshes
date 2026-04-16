@@ -28,6 +28,30 @@ ModUtil.LoadOnce(function ()
 		end
 	end
 
+	local function registerAdditionalUpgradeData(cardName)
+		local cardData = MetaUpgradeCardData[cardName]
+		local upgradeData = MetaUpgradeCardUpgradeData or (game and game.MetaUpgradeCardUpgradeData)
+		if not cardData or not cardData.UpgradeResourceCost or not upgradeData then
+			return
+		end
+
+		cardData.Name = cardData.Name or cardName
+
+		for i, upgradeCost in ipairs(cardData.UpgradeResourceCost) do
+			local upgradeName = cardName .. i
+			if not upgradeData[upgradeName] then
+				upgradeData[upgradeName] =
+				{
+					Name = upgradeName,
+					DisplayName = cardData.DisplayName or cardData.Name or cardName,
+					Cost = upgradeCost,
+					Image = cardData.Image,
+					IconScale = cardData.IconScale or MetaUpgradeCardData.ChanneledCast.IconScale
+				}
+			end
+		end
+	end
+
 	-- Add additional upgrade levels to all upgrade tables
 	addAdditionalUpgrades(MetaUpgradeCardData.ChanneledCast, false)
 	addAdditionalUpgrades(MetaUpgradeCardData.HealthRegen, false)
@@ -54,4 +78,41 @@ ModUtil.LoadOnce(function ()
 	addAdditionalUpgrades(MetaUpgradeCardData.MetaToRunUpgrade, true) -- Skipping because the legendary upgrade doesn't work correctly
 	addAdditionalUpgrades(MetaUpgradeCardData.EpicRarityBoost, false)
 	addAdditionalUpgrades(MetaUpgradeCardData.CardDraw, false)
+
+	local extendedCards =
+	{
+		"ChanneledCast",
+		"HealthRegen",
+		"LowManaDamageBonus",
+		"MagicCrit",
+		"BonusDodge",
+		"CastBuff",
+		"BonusHealth",
+		"ManaOverTime",
+		"SorceryRegenUpgrade",
+		"ChanneledBlock",
+		"SprintShield",
+		"LastStand",
+		"MaxHealthPerRoom",
+		"CastCount",
+		"LowHealthBonus",
+		"DoorReroll",
+		"StartingGold",
+		"StatusVulnerability",
+		"RarityBoost",
+		"BonusRarity",
+		"TradeOff",
+		"ScreenReroll",
+		"MetaToRunUpgrade",
+		"EpicRarityBoost",
+		"CardDraw",
+	}
+
+	for _, cardName in ipairs(extendedCards) do
+		registerAdditionalUpgradeData(cardName)
+	end
+
+	if ExtendedAltarOfAshes.RestorePersistedState then
+		ExtendedAltarOfAshes.RestorePersistedState()
+	end
 end)

@@ -82,3 +82,105 @@ function RefundMetaUpgradeLimitAction(screen, button)
     MouseOverMetaUpgradeCardLimit(button)
     UpdateAffordabilityStatus()
 end
+
+local EAOA_UNPACK = table.unpack or unpack
+
+local function EAOA_GetCardLevel(metaUpgradeName)
+    if not GameState or not GameState.MetaUpgradeState then
+        return nil
+    end
+
+    local entry = GameState.MetaUpgradeState[metaUpgradeName]
+
+    if type(entry) == "table" then
+        return entry.Level
+    elseif type(entry) == "number" then
+        return entry
+    end
+
+    return nil
+end
+
+local function EAOA_SetCardLevel(metaUpgradeName, level)
+    GameState.MetaUpgradeState = GameState.MetaUpgradeState or {}
+
+    local entry = GameState.MetaUpgradeState[metaUpgradeName]
+
+    if type(entry) ~= "table" then
+        entry = { Level = type(entry) == "number" and entry or 0 }
+        GameState.MetaUpgradeState[metaUpgradeName] = entry
+    end
+
+    entry.Level = level
+end
+
+local function EAOA_GetMaxModdedLevel(metaUpgradeName)
+    local data = MetaUpgradeCardData and MetaUpgradeCardData[metaUpgradeName]
+
+    if not data or not data.UpgradeResourceCost then
+        return 3
+    end
+
+    return #data.UpgradeResourceCost + 1
+end
+
+function ExtendedAltarOfAshes.CapturePersistedState()
+    if not GameState then
+        return
+    end
+
+    GameState.EAOA_PersistedState = GameState.EAOA_PersistedState or {}
+    GameState.EAOA_PersistedState.MetaUpgradeLevels = GameState.EAOA_PersistedState.MetaUpgradeLevels or {}
+
+    local persisted = GameState.EAOA_PersistedState.MetaUpgradeLevels
+
+    local function captureOne(name)
+        local level = EAOA_GetCardLevel(name)
+
+        if type(level) == "number" and level > 3 then
+            persisted[name] = level
+        else
+            persisted[name] = nil
+        end
+    end
+
+    if GameData and GameData.AllMetaUpgradeTraits then
+        for _, name in ipairs(GameData.AllMetaUpgradeTraits) do
+            captureOne(name)
+        end
+    elseif GameState.MetaUpgradeState then
+        for name, _ in pairs(GameState.MetaUpgradeState) do
+            captureOne(name)
+        end
+    end
+end
+
+function ExtendedAltarOfAshes.RestorePersistedState()
+    if not GameState or not GameState.EAOA_PersistedState then
+        return
+    end
+
+    local persisted = GameState.EAOA_PersistedState.MetaUpgradeLevels
+
+    if persisted then
+        for name, level in pairs(persisted) do
+            if type(level) == "number" and level > 3 then
+                local maxLevel = EAOA_GetMaxModdedLevel(name)
+
+                if maxLevel >= level then
+                    local current = EAOA_GetCardLevel(name) or 0
+
+                    if current < level then
+                        EAOA_SetCardLevel(name, level)
+                    end
+                end
+            end
+        end
+    end
+end
+
+ModUtil.Path.Wrap("UpgradeMetaUpgradeCardAction", function(baseFunc, ...)
+    local results = { baseFunc(...) }
+    ExtendedAltarOfAshes.CapturePersistedState()
+    return EAOA_UNPACK(results)
+end, ExtendedAltarOfAshes)
