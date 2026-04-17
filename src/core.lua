@@ -133,14 +133,19 @@ function ExtendedAltarOfAshes.CapturePersistedState()
     GameState.EAOA_PersistedState.MetaUpgradeLevels = GameState.EAOA_PersistedState.MetaUpgradeLevels or {}
 
     local persisted = GameState.EAOA_PersistedState.MetaUpgradeLevels
+    local seen = {}
 
     local function captureOne(name)
+        if seen[name] then
+            return
+        end
+
+        seen[name] = true
+
         local level = EAOA_GetCardLevel(name)
 
         if type(level) == "number" and level > 3 then
             persisted[name] = level
-        else
-            persisted[name] = nil
         end
     end
 
@@ -148,7 +153,9 @@ function ExtendedAltarOfAshes.CapturePersistedState()
         for _, name in ipairs(GameData.AllMetaUpgradeTraits) do
             captureOne(name)
         end
-    elseif GameState.MetaUpgradeState then
+    end
+
+    if GameState.MetaUpgradeState then
         for name, _ in pairs(GameState.MetaUpgradeState) do
             captureOne(name)
         end
