@@ -2,9 +2,9 @@
   "namespace": "BlueRaja",
   "name": "ExtendedAltarOfAshesFixed",
   "description": "Adds Heroic and Legendary upgrades to the Altar of Ashes cards and increases maximum Grasp",
-  "version_number": "3.0.0",
+  "version_number": "4.0.0",
   "dependencies": [
-    "Hell2Modding-Hell2Modding-1.0.79",
+    "Hell2Modding-Hell2Modding-1.0.96",
     "SGG_Modding-DemonDaemon-1.1.0",
     "SGG_Modding-ModUtil-4.0.1"
   ],

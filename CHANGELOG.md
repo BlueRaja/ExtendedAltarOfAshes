@@ -1,3 +1,7 @@
+## 4.0.0 - 2026-04-26
+
+- Fix save/reload issue caused by Post Launch Patch 2 (new arcana upgrades were reset after saving/reloading)
+
 ## 3.0.0 - 2025-11-14
 
 - Added `AddLegendaryArcana` and `MaxGrasp` config values
